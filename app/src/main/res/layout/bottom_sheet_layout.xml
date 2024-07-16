@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:layout_marginTop="100dp">
+
+    <!-- Schieber oben am Fenster -->
+    <View
+        android:id="@+id/grip_handle_bg"
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:background="@drawable/grip_handle_bg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp" />
+
+    <ImageView
+        android:id="@+id/ivTopImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_top_image"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/grip_handle_bg">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tricycle XXX-VYA"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:gravity="start"
+            android:layout_marginTop="7dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="0dp"> <!-- Reduzierter Abstand -->
+
+            <ImageView
+                android:id="@+id/ivBattery"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_battery"
+                android:layout_gravity="center_vertical" />
+
+            <TextView
+                android:id="@+id/tvRange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10 km Reichweite"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:gravity="start"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="2dp"/> <!-- Reduzierter Abstand -->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-5dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="2dp"
+            android:orientation="horizontal"> <!-- Reduzierter Abstand -->
+
+            <ImageView
+                android:id="@+id/ivPayment"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/ic_payment" /> <!-- Reduzierter Abstand -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvStartCost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:text="1€ zum Starten"
+                    android:textColor="#000000"
+                    android:textSize="20sp" /> <!-- Reduzierter Abstand -->
+
+                <TextView
+                    android:id="@+id/tvCostPerMinute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="anschließend 0,20€/min"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/startFahrtButton"
+            android:layout_width="224dp"
+            android:layout_height="58dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="1dp"
+            android:text="Fahrt beginnen"
+            android:textSize="24sp"
+            android:textColor="#00008B"
+            android:visibility="visible"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+</RelativeLayout>

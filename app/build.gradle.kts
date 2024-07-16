@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.goride_3"
-        minSdk = 24
+        minSdk = 34
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -41,8 +41,11 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
+    implementation(libs.filament.android)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
     implementation("com.google.android.gms:play-services-maps:18.2.0")
+    implementation ("com.google.android.material:material:1.4.0")
+    implementation ("com.journeyapps:zxing-android-embedded:4.3.0")
 }
